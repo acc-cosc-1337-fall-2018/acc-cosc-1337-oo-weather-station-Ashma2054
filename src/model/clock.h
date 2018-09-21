@@ -1,7 +1,7 @@
 #ifndef CLOCK_H   //Checks so that same class is not created elsewhere
 #define CLOCK_H
 
-class clock
+class Clock
 {
 public:
 	int get_hours(long long seconds); 

@@ -4,7 +4,7 @@
 
 TEST_CASE("Test hours form seconds")
 {
-	clock clock;
+	Clock clock;
 
 	REQUIRE(clock.get_hours(3600) == 1);
 	REQUIRE(clock.get_hours(34950) == 9);
@@ -15,7 +15,7 @@ TEST_CASE("Test hours form seconds")
 
 TEST_CASE("Test hours form minutes")
 {
-	clock clock;
+	Clock clock;
 
 	REQUIRE(clock.get_minutes(3600) == 0);
 	REQUIRE(clock.get_minutes(3800) == 3);
@@ -26,7 +26,7 @@ TEST_CASE("Test hours form minutes")
 
 TEST_CASE("Test get seconds form seconds since 1970")
 {
-	clock clock;
+	Clock clock;
 
 	REQUIRE(clock.get_seconds(3600) == 0);
 	REQUIRE(clock.get_seconds(38000) == 20);

@@ -2,7 +2,7 @@
 
 int main() 
 {
-	clock clock;
+	Clock clock;
 
 	clock.display_time();
 
