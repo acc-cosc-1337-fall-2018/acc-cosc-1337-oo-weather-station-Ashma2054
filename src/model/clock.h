@@ -1,15 +1,25 @@
-#ifndef CLOCK_H   //Checks so that same class is not created elsewhere
+#ifndef CLOCK_H
 #define CLOCK_H
+#include<chrono>
 
-class Clock
+class Clock 
 {
 public:
-	int get_hours(long long seconds); 
-	int get_minutes(long long seconds);
-	int get_seconds(long long seconds);
+	Clock() 
+	{
+		seconds = std::chrono::system_clock::now().time_since_epoch() /
+			std::chrono::seconds(1);
+	}
+	Clock(long long sec) : seconds(sec) {}
+	int get_hours() const;
+	int get_minutes() const;
+	int get_seconds() const;
 	void display_time();
 
+private:
+	long long seconds;
+	void update_time();
 
 };
 
-#endif       //CLOCK_H
+#endif // CLOCK_H
