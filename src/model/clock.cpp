@@ -1,12 +1,12 @@
 #include "clock.h"
 #include<iostream>
 
-int Clock::get_hours() const
+int Clock::get_hours() const // creates the variables defined within the function into constant so that it cannot be changed 
 {
 	return seconds / 3600 % 24;
 }
 
-int Clock::get_minutes()const
+int Clock::get_minutes()const // '::' defines the scope
 {
 	return seconds / 60 % 60;
 }
